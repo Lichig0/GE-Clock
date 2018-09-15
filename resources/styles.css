@@ -1,0 +1,97 @@
+.background {
+  viewport-fill: black;
+}
+.foreground {
+  viewport-fill: black;
+  fill: lightgreen;
+}
+#face {
+  viewport-fill: #0c3d0c;
+}
+#time {
+  font-size: 50;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 40%;
+  fill: lightgreen;
+}
+#date {
+  font-size: 30;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 65%;
+  fill: lightgreen;
+}
+
+#day-name {
+  font-size: 30;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 53%;
+  fill: lightgreen;
+}
+
+#place {
+  font-size: 20;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 90%-10;
+  fill: lightgreen;
+}
+
+#temperature {
+  font-size: 25;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%-20;
+  y: 95%;
+  fill: lightgreen;
+}
+
+#battery {
+  font-size: 25;
+  font-family: System-Regular;
+  text-length: 3;
+  text-anchor: middle;
+  x: 50%;
+  y: 25;
+  fill: orange;
+}
+
+#mission-status {
+  font-size: 10;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 50;
+  fill: darkgreen;
+}
+
+#steps {
+  font-size: 30;
+  font-family: System-Regular;
+  text-length: 6;
+  x: 50%+6;
+  y: 50%+70;
+  fill: lightblue;
+}
+
+#myHeartRate {
+  font-size: 25;
+  font-family: System-Regular;
+  text-length: 3;
+  text-anchor: middle;
+  x: 40%;
+  y: 50%+70;
+  fill: red;
+}

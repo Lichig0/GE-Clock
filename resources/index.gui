@@ -1,0 +1,65 @@
+<!-- <svg id="face" class="portrait-view"> -->
+<svg id="face" viewport-fill="black" class="portrait-view">
+<!--   <circle cx="50%" cy="50%" r="130" fill="#0c3d0c" /> -->
+<!-- </svg> -->
+
+  <!--   <image id="backface" href="images/face_trimed_minimal.png" class="background" height="70%" width="70%" x="15%" y="15%" /> -->
+<!--   <image id="healthBar" href="images/gy_hp_small.png" x="0" y="0" height="100%" width="30%"  class="foreground"/> -->
+  
+ 
+<svg>
+  <g transform="rotate(180)">
+  <rect id="step-bar" width="10%" height="10%" x="90%" y="0" fill="red"/>
+    <line x1="100%" x2="90%" y1="0%" y2="0%" fill="red" stroke-width="3"/>
+    <line x1="100%" x2="90%" y1="100%" y2="100%" fill="red" stroke-width="3"/>
+    <line x1="100%" x2="100%" y1="0%" y2="100%" fill="red" stroke-width="3"/>
+    <line x1="90%" x2="90%" y1="0%" y2="100%" fill="red" stroke-width="3"/>
+  </g>
+</svg>
+<svg>
+  <rect id="cal-bar" width="10%" height="20%" x="80%" y="0" fill="#FFAAAA" />
+    <line x1="90%" x2="80%" y1="0%" y2="0%" fill="orange" stroke-width="3"/>
+    <line x1="90%" x2="80%" y1="100%" y2="100%" fill="orange" stroke-width="3"/>
+    <line x1="90%" x2="90%" y1="0%" y2="100%" fill="orange" stroke-width="3"/>
+    <line x1="80%" x2="80%" y1="0%" y2="100%" fill="orange" stroke-width="3"/>
+</svg>
+
+<svg>
+  <rect id="activity-bar" width="10%" height="20%" x="10%" y="0" fill="green" />
+    <line x1="20%" x2="10%" y1="0%" y2="0%" fill="green" stroke-width="3"/>
+    <line x1="20%" x2="10%" y1="100%" y2="100%" fill="green" stroke-width="3"/>
+    <line x1="20%" x2="20%" y1="0%" y2="100%" fill="green" stroke-width="3"/>
+    <line x1="10%" x2="10%" y1="0%" y2="100%" fill="green" stroke-width="3"/>
+</svg>
+<svg>
+  <rect id="distance-bar" width="10%" height="20%" x="0%" y="0" fill="#00FFFF" />
+    <line x1="10%" x2="0%" y1="0%" y2="0%" fill="blue" stroke-width="3"/>
+    <line x1="10%" x2="0%" y1="100%" y2="100%" fill="blue" stroke-width="3"/>
+    <line x1="10%" x2="10%" y1="0%" y2="100%" fill="blue" stroke-width="3"/>
+    <line x1="0%" x2="0%" y1="0%" y2="100%" fill="blue" stroke-width="3"/>
+</svg>
+
+  
+<!--   <image id="armorBar" href="images/gy_arm_small.png" x="245" y="0"  height="100%" width="30%" class="foreground"/> -->
+<!-- Battery -->
+  <image id="battery-icon" href="images/battery/battery-100.png" height="24" width="24"  x="50%+21" y="4" class="foreground" />
+  <text id="battery" class="foreground"/>
+  
+  <text id="mission" class="foreground" />
+  <text id="mission-status" class="foreground">MISSION STATUS: INCOMPLETE</text>
+<!--  Clock  -->
+  <text id="time" class="foreground"/>
+  <text id="date" class="foreground"/>
+  <text id="day-name" class="foreground" />
+<!--  Weather  -->
+   <text id="place" class="foreground"/>
+   <text id="temperature" class="foreground" />
+   <image id="condition-icon" href="images/weather/cat.png" height="24" width="24" x="50%+10" y="95%-20" class="foreground" />
+<!--  Steps  -->
+  <image id="battery-icon" href="images/walk-blue.png" height="24" width="24"  x="50%-14" y="50%+47" class="foreground" />
+  <text id="steps" class="foreground"/>
+  
+<!-- Heart Rate   -->
+  <image id="heart" href="images/heart-pulse-red.png" height="24" width="24"  x="40%-45" y="50%+46" class="foreground" />
+  <text id="myHeartRate" class="background"/>
+</svg>

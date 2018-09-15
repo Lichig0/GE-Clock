@@ -95,3 +95,13 @@
   y: 50%+70;
   fill: red;
 }
+
+#metric {
+  font-size: 25;
+  font-family: System-Regular;
+  text-length: 9;
+  text-anchor: middle;
+  x: 0;
+  y: 50%;
+  fill: grey;
+}

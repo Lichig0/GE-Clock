@@ -28,6 +28,11 @@ let calBar = document.getElementById("cal-bar");
 let activityBar = document.getElementById("activity-bar");
 let distanceBar = document.getElementById("distance-bar");
 
+let stepcount = document.getElementById("stepcount");
+let calories = document.getElementById("calories");
+let distance = document.getElementById("distance");
+let activity = document.getElementById("activity");
+
 var hrm = new HeartRateSensor();
 console.log(goals.steps);
 steps.text=today.local.steps;
@@ -60,14 +65,24 @@ function updateClock() {
   dateLabel.text = `${month}/${monthDay}/${year}`;
   dateName.text = day;
   time.text = `${hours}:${mins}${amPm}`;
-  steps.text = today.local.steps;
   batteryLabel.text = `${bat}`;
   batteryIcon.href = util.setBatteryIcon(battery.chargeLevel);
   
-  stepBar.height = (today.local.steps / goals.steps) * 250;
-  calBar.height = (today.local.calories / goals.calories) * 250;
-  activityBar.height = (today.local.activeMinutes / goals.activeMinutes) * 250;
-  distanceBar.height = (today.local.distance / goals.distance) * 250;
+  stepcount.text = steps.text = today.local.steps;
+  calories.text = today.local.calories;
+  distance.text = today.local.distance;
+  activity.text = today.local.activeMinutes;
+  
+
+  // stepBar["sweep-angle"] = (today.local.steps / goals.steps) * 90;
+  // calBar["sweep-angle"] = (today.local.calories / goals.calories) * 90;
+  // activityBar["sweep-angle"] = (today.local.activeMinutes / goals.activeMinutes) * 90;
+  // distanceBar.height["sweep-angle"] = (today.local.distance / goals.distance) * 90;
+  
+  // stepBar["sweep-angle"] = (.25) * 360;
+  // calBar["sweep-angle"] = (.5) * 360;
+  // activityBar["sweep-angle"] = (.75) * 360;
+  // distanceBar.height["sweep-angle"] = (.9) * 360;
   
 }
 

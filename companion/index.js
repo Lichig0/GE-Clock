@@ -47,7 +47,7 @@ function getPosition(weatherServiceCallback)
 
 function updateWeather() {
   let cache = localStorage.getItem("weather");
-  console.log(cache);
+  console.log("sending cached weather");
   if (cache !== undefined) {
     returnWeatherData(JSON.parse(cache));
   }
@@ -68,7 +68,8 @@ function queryOpenWeather(thisPos) {
           conditions: data.weather[0].icon,
           name: data.name,
         }
-        console.log(JSON.stringify(weather));
+        // console.log(JSON.stringify(weather));
+        console.log("Sending updated weather");
         localStorage.setItem("weather", JSON.stringify(weather));
         // Send the weather data to the device
         returnWeatherData(weather);
@@ -98,9 +99,9 @@ if (me.launchReasons.wokenUp) {
   me.yield()
 }
 
-if (me.launchReasons.locationChanged !== null) {
+if (me.launchReasons.locationChanged != null) {
   // The companion was started due to a significant change in physical location
-  console.log("Significant location change!")
+  console.log("Significant location change!", me.launchReasons.locationChanged);
   
   pos = me.launchReasons.locationChanged.position;
   updateWeather();

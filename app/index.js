@@ -33,6 +33,11 @@ let calories = document.getElementById("calories");
 let distance = document.getElementById("distance");
 let activity = document.getElementById("activity");
 
+let stepcountGoal = document.getElementById("stepcount-goal");
+let caloriesGoal = document.getElementById("calories-goal");
+let distanceGoal = document.getElementById("distance-goal");
+let activityGoal = document.getElementById("activity-goal");
+
 var hrm = new HeartRateSensor();
 console.log(goals.steps);
 steps.text=today.local.steps;
@@ -73,17 +78,15 @@ function updateClock() {
   distance.text = today.local.distance;
   activity.text = today.local.activeMinutes;
   
-
-  // stepBar["sweep-angle"] = (today.local.steps / goals.steps) * 90;
-  // calBar["sweep-angle"] = (today.local.calories / goals.calories) * 90;
-  // activityBar["sweep-angle"] = (today.local.activeMinutes / goals.activeMinutes) * 90;
-  // distanceBar.height["sweep-angle"] = (today.local.distance / goals.distance) * 90;
+  stepcountGoal.text = goals.steps;
+  caloriesGoal.text = goals.calories;
+  distanceGoal.text = goals.distance;
+  activityGoal.text = goals.activeMinutes;
   
-  // stepBar["sweep-angle"] = (.25) * 360;
-  // calBar["sweep-angle"] = (.5) * 360;
-  // activityBar["sweep-angle"] = (.75) * 360;
-  // distanceBar.height["sweep-angle"] = (.9) * 360;
-  
+  stepBar.sweepAngle = (today.local.steps / goals.steps) * 90;
+  calBar.sweepAngle = (today.local.calories / goals.calories) * 90;
+  activityBar.sweepAngle = (today.local.activeMinutes / goals.activeMinutes) * 90;
+  distanceBar.sweepAngle = (today.local.distance / goals.distance) * 90;
 }
 
 // Update the clock every tick event

@@ -13,14 +13,14 @@
   <image href="images/stat/stat_cals_solid_24px.png"
     class="calories icon" x="328" y="100"/>
   <!-- Fill -->
-  <arc x="348-100" y="0-100" width="200" height="200" fill="#A11111"
+  <arc x="248" y="-100" width="200" height="200" fill="#A11111"
     arc-width="10" start-angle="180" sweep-angle="90" />
-  <arc id="cal-bar" x="348-100" y="0-100" width="200" height="200" fill="orange"
+  <arc id="cal-bar" x="248" y="-100" width="200" height="200" fill="orange"
     arc-width="10" start-angle="180" sweep-angle="90"/>
   <!--Outline -->
-  <arc x="348-100" y="0-100" width="200" height="200" fill="orange"
+  <arc x="248" y="-100" width="200" height="200" fill="orange"
     arc-width="1" start-angle="180" sweep-angle="90" />
-  <arc x="348-90" y="0-90" width="180" height="180" fill="orange"
+  <arc x="258" y="-90" width="180" height="180" fill="orange"
     arc-width="1" start-angle="180" sweep-angle="90" />
 </svg>
 <!-- bottom right -->
@@ -30,13 +30,13 @@
     class="steps icon" x="328" y="130"/>
   <text id="stepcount-goal" class="goal"/>
 
-  <arc x="348-100" y="250-100" width="200" height="200" fill="#003111"
+  <arc x="248" y="150" width="200" height="200" fill="#003111"
     arc-width="10" start-angle="270" sweep-angle="90" />
-  <arc id="step-bar" class="steps" x="348-100" y="250-100" width="200" height="200"
+  <arc id="step-bar" class="steps" x="248" y="150" width="200" height="200"
     arc-width="10" start-angle="270" />
-  <arc x="348-100" y="250-100" width="200" height="200" fill="green"
+  <arc x="248" y="150" width="200" height="200" fill="green"
     arc-width="1" start-angle="270" sweep-angle="90" />
-  <arc x="348-90" y="250-90" width="180" height="180" fill="green"
+  <arc x="258" y="160" width="180" height="180" fill="green"
     arc-width="1" start-angle="270" sweep-angle="90" />
 </svg>
 <!-- top left -->
@@ -46,14 +46,14 @@
  <image href="images/stat/stat_dist_solid_24px.png"
     class="distance icon" x="0" y="100"/>
 
-  <arc x="0-100" y="0-100" width="200" height="200" fill="darkblue"
+  <arc x="-100" y="-100" width="200" height="200" fill="darkblue"
     arc-width="10" start-angle="90" sweep-angle="90" />
-  <arc id="distance-bar" class="distance" x="0-100" y="0-100" width="200" height="200"
+  <arc id="distance-bar" class="distance" x="-100" y="-100" width="200" height="200"
     arc-width="10" start-angle="90" />
 
-  <arc x="0-100" y="0-100" width="200" height="200" fill="#000055"
+  <arc x="-100" y="-100" width="200" height="200" fill="#000055"
     arc-width="1" start-angle="90" sweep-angle="90" />
-  <arc x="10-100" y="0-90" width="180" height="180" fill="#000055"
+  <arc x="90" y="-90" width="180" height="180" fill="#000055"
     arc-width="1" start-angle="90" sweep-angle="90" />
  </svg>
 
@@ -64,11 +64,13 @@
   <image href="images/stat/stat_am_solid_24px.png"
     class="activity icon" x="0" y="130"/>
 
-  <arc id="activity-bar" class="activity" x="0-100" y="250-100" width="200" height="200"
+  <arc class="activity" x="-100" y="150" width="200" height="200"
+    arc-width="10" start-angle="0" sweep-angle="100" fill="#880000" />
+  <arc id="activity-bar" class="activity" x="-100" y="150" width="200" height="200"
     arc-width="10" start-angle="0" sweep-angle="33" />
-  <arc x="0-100" y="250-100" width="200" height="200" fill="#550000"
+  <arc x="-100" y="150" width="200" height="200" fill="#550000"
     arc-width="1" start-angle="0" sweep-angle="90" />
-  <arc x="0-90" y="250-90" width="180" height="180" fill="#550000"
+  <arc x="-90" y="160" width="180" height="180" fill="#550000"
     arc-width="1" start-angle="0" sweep-angle="90" />
  </svg>
  

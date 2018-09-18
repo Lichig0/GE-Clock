@@ -104,7 +104,7 @@
   fill: lightgreen;
 }
 .goal {
-  font-size: 10;
+  font-size: 15;
   font-family: System-Regular;
   text-length: 9;
   text-anchor: middle;
@@ -131,11 +131,11 @@
 }
 
 #stepcount {
-  x: 348-30;
-  y: 250-40;
+  x: 318;
+  y: 210;
 }
 #calories {
-  x: 348-30;
+  x: 318;
   y: 30;
 }
 
@@ -146,24 +146,24 @@
 
 #activity {
   x: 30;
-  y: 250-40;
+  y: 210;
 }
 
 #stepcount-goal {
-  x: 348-30;
-  y: 250-20;
+  x: 318;
+  y: 230;
 }
 #calories-goal{
-  x: 348-30;
-  y: 30+30;
+  x: 318;
+  y: 60;
 }
 
 #distance-goal{
   x: 30;
-  y: 30+30;
+  y: 60;
 }
 
 #activity-goal{
   x: 30;
-  y: 250-20;
+  y: 230;
 }

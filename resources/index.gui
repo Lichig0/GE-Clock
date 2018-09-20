@@ -1,10 +1,5 @@
-<!-- <svg id="face" class="portrait-view"> -->
 <svg id="face" viewport-fill="black" class="portrait-view">
-<!--   <circle cx="50%" cy="50%" r="130" fill="#0c3d0c" /> -->
-<!-- </svg> -->
 
-  <!--   <image id="backface" href="images/face_trimed_minimal.png" class="background" height="70%" width="70%" x="15%" y="15%" /> -->
-<!--   <image id="healthBar" href="images/gy_hp_small.png" x="0" y="0" height="100%" width="30%"  class="foreground"/> -->
   <!-- w: 348 250 -->
   <!-- top right -->
 <svg> 
@@ -13,10 +8,10 @@
   <image href="images/stat/stat_cals_solid_24px.png"
     class="calories icon" x="328" y="100"/>
   <!-- Fill -->
-  <arc x="248" y="-100" width="200" height="200" fill="#A11111"
+  <arc x="248" y="-100" width="200" height="200" fill="#003111"
     arc-width="10" start-angle="180" sweep-angle="90" />
-  <arc id="cal-bar" x="248" y="-100" width="200" height="200" fill="orange"
-    arc-width="10" start-angle="180" sweep-angle="90"/>
+  <arc id="cal-bar" class="calories" x="248" y="-100" width="200" height="200"
+    arc-width="10" start-angle="180" sweep-angle="0"/>
   <!--Outline -->
   <arc x="248" y="-100" width="200" height="200" fill="orange"
     arc-width="1" start-angle="180" sweep-angle="90" />
@@ -46,15 +41,15 @@
  <image href="images/stat/stat_dist_solid_24px.png"
     class="distance icon" x="0" y="100"/>
 
-  <arc x="-100" y="-100" width="200" height="200" fill="darkblue"
+  <arc x="-100" y="-100" width="200" height="200" fill="#003111"
     arc-width="10" start-angle="90" sweep-angle="90" />
   <arc id="distance-bar" class="distance" x="-100" y="-100" width="200" height="200"
     arc-width="10" start-angle="90" />
 
-  <arc x="-100" y="-100" width="200" height="200" fill="#000055"
+  <!-- <arc x="-100" y="-100" width="200" height="200" fill="#000055"
     arc-width="1" start-angle="90" sweep-angle="90" />
   <arc x="90" y="-90" width="180" height="180" fill="#000055"
-    arc-width="1" start-angle="90" sweep-angle="90" />
+    arc-width="1" start-angle="90" sweep-angle="90" /> -->
  </svg>
 
 <!-- bottum left -->
@@ -65,7 +60,7 @@
     class="activity icon" x="0" y="130"/>
 
   <arc class="activity" x="-100" y="150" width="200" height="200"
-    arc-width="10" start-angle="0" sweep-angle="100" fill="#880000" />
+    arc-width="10" start-angle="0" sweep-angle="100" fill="#003111" />
   <arc id="activity-bar" class="activity" x="-100" y="150" width="200" height="200"
     arc-width="10" start-angle="0" sweep-angle="33" />
   <arc x="-100" y="150" width="200" height="200" fill="#550000"
@@ -75,42 +70,14 @@
  </svg>
  
 
-<svg>
+<!-- <svg>
   <line x1="100" x2="248" y1="100%" y2="100%" fill="darkred" stroke-width="5"/>
   <line x1="100" x2="208" y1="100%" y2="100%" fill="red" stroke-width="5"/>
-</svg>
+</svg> -->
 <svg>
   <line x1="258" x2="348" y1="100%" y2="100%" fill="darkgreen" stroke-width="5"/>
   <line x1="258" x2="328" y1="100%" y2="100%" fill="lightgreen" stroke-width="5"/>
 </svg>
-<!--    <line x1="100%" x2="100%" y1="0%" y2="100%" fill="red" stroke-width="3"/>
-    <line x1="90%" x2="90%" y1="0%" y2="100%" fill="red" stroke-width="3"/>
-</svg>
-<svg>
-  <rect width= height=1 x="80%" y="0" fill="#FFAAAA" />
-    <line x1="90%" x2="80%" y1="0%" y2="0%" fill="orange" stroke-width="3"/>
-    <line x1="90%" x2="80%" y1="100%" y2="100%" fill="orange" stroke-width="3"/>
-    <line x1="90%" x2="90%" y1="0%" y2="100%" fill="orange" stroke-width="3"/>
-    <line x1="80%" x2="80%" y1="0%" y2="100%" fill="orange" stroke-width="3"/>
-</svg> -->
-<!-- 
-<svg>
-  <rect id="activity-bar" width="5%" height="20%" x="10%" y="0" fill="green" />
-    <line x1="20%" x2="10%" y1="0%" y2="0%" fill="green" stroke-width="3"/>
-    <line x1="20%" x2="10%" y1="100%" y2="100%" fill="green" stroke-width="3"/>
-    <line x1="20%" x2="20%" y1="0%" y2="100%" fill="green" stroke-width="3"/>
-    <line x1="10%" x2="10%" y1="0%" y2="100%" fill="green" stroke-width="3"/>
-</svg>
-<svg>
-  <rect id="distance-bar" width="5%" height="20%" x="0%" y="0" fill="#00FFFF" />
-    <line x1="10%" x2="0%" y1="0%" y2="0%" fill="blue" stroke-width="3"/>
-    <line x1="10%" x2="0%" y1="100%" y2="100%" fill="blue" stroke-width="3"/>
-    <line x1="10%" x2="10%" y1="0%" y2="100%" fill="blue" stroke-width="3"/>
-    <line x1="0%" x2="0%" y1="0%" y2="100%" fill="blue" stroke-width="3"/>
-</svg> -->
-
-  
-<!--   <image id="armorBar" href="images/gy_arm_small.png" x="245" y="0"  height="100%" width="30%" class="foreground"/> -->
 <!-- Battery -->
   <image id="battery-icon" href="images/battery/battery-100.png" height="24" width="24"  x="50%+21" y="4" class="foreground" />
   <text id="battery" class="foreground"/>

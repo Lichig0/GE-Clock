@@ -75,12 +75,12 @@ function updateClock() {
   
   stepcount.text = steps.text = today.local.steps;
   calories.text = today.local.calories;
-  distance.text = today.local.distance;
+  distance.text = today.local.distance / 1,609.344;
   activity.text = today.local.activeMinutes;
   
   stepcountGoal.text = goals.steps;
   caloriesGoal.text = goals.calories;
-  distanceGoal.text = goals.distance;
+  distanceGoal.text = goals.distance / 1,609.344;
   activityGoal.text = goals.activeMinutes;
   
   stepBar.sweepAngle = (today.local.steps / goals.steps) * 90;

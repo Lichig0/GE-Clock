@@ -97,14 +97,14 @@
 }
 
 .metric {
-  font-size: 20;
+  font-size: 25;
   font-family: System-Regular;
   text-length: 9;
   text-anchor: middle;
   fill: lightgreen;
 }
 .goal {
-  font-size: 15;
+  font-size: 20;
   font-family: System-Regular;
   text-length: 9;
   text-anchor: middle;
@@ -117,17 +117,21 @@
 }
 
 .steps {
-  fill: #00AA22
+  fill: #00AA22;
+  fill: lightgreen;
 }
 
 .calories {
   fill: orange;
+  fill: lightgreen;
 }
 .distance {
-  fill: blue;
+  fill: skyblue;
+  fill: lightgreen;
 }
 .activity {
  fill: red;
+ fill: lightgreen;
 }
 
 #stepcount {

@@ -2,13 +2,13 @@ function mySettings(props) {
   return (
     <Page>
       <Section
-        title={<Text bold align="center">Demo Settings</Text>}>
+        title={<Text bold align="center">Color Settings</Text>}>
         <Toggle
           settingsKey="toggle"
           label="Toggle Switch"
         />
         <ColorSelect
-          settingsKey="color"
+          settingsKey="faceColor"
           colors={[
             {color: "tomato"},
             {color: "sandybrown"},

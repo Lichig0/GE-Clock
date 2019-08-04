@@ -3,7 +3,20 @@ import * as messaging from "messaging";
 import { me } from "companion";
 import { geolocation } from "geolocation";
 import { localStorage } from "local-storage";
+import { settingsStorage } from "settings";
 
+// Event fires when a setting is changed
+settingsStorage.onchange = function(evt) {
+  sendValue(evt.key, evt.newValue);
+  // Which setting changed
+  console.log("key: " + evt.key)
+
+  // What was the old value
+  console.log("old value: " + evt.oldValue)
+
+  // What is the new value
+  console.log("new value: " + evt.newValue)
+}
 
 
 // Helper
@@ -15,7 +28,7 @@ me.wakeInterval = 15 * MILLISECONDS_PER_MINUTE
 me.monitorSignificantLocationChanges = true
 
 let pos = getPosition();
-let defaultPosition = { coords: { latitude: 0,longitude: 0, } };
+let defaultPosition = { coords: { latitude: 0, longitude: 0, } };
 let lastPosition;
 const UNITS = "imperial";
 const API_KEY = "12375bea240af71f5d583ed3fad02ba6";
@@ -84,7 +97,7 @@ function queryOpenWeather(thisPos) {
 function returnWeatherData(data) {
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
     // Send a command to the device
-    messaging.peerSocket.send(data);
+    messaging.peerSocket.send({topic: 'weather', data});
   } else {
     console.log("Error: Connection is not open");
   }
@@ -108,6 +121,29 @@ if (me.launchReasons.locationChanged != null) {
   
   console.log("Latitude: " + pos.coords.latitude,
               "Longitude: " + pos.coords.longitude);
+}
+
+// Settings were changed while the companion was not running
+if (me.launchReasons.settingsChanged) {
+  // Send the value of the setting
+  sendValue('faceColor', settingsStorage.getItem('faceColor'));
+}
+
+function sendValue(key, val) {
+  if (val) {
+    sendSettingData({
+      key: key,
+      value: JSON.parse(val)
+    });
+  }
+}
+function sendSettingData(data) {
+  // If we have a MessageSocket, send the data to the device
+  if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
+    messaging.peerSocket.send({topic: 'setting', data});
+  } else {
+    console.log("No peerSocket connection");
+  }
 }
 
 // Listen for messages from the device

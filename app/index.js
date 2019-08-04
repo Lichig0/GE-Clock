@@ -124,8 +124,12 @@ messaging.peerSocket.onopen = function() {
 
 // Listen for messages from the companion
 messaging.peerSocket.onmessage = function(evt) {
-  if (evt.data) {
-    processWeatherData(evt.data);
+  console.log(JSON.stringify(evt))
+  if (evt.data.topic === 'weather') {
+    processWeatherData(evt.data.data);
+  } else if (evt.topic === 'setting') {
+    console.log("got", evt)
+    time.style.fill = evt.data.data.value;
   }
 }
 
